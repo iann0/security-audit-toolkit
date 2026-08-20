@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Security audit report">
+
+    <title>Security Audit Report</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px;
+
+            background: #0b0f14;
+            color: #d8dee9;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            margin-bottom: 8px;
+            font-size: 32px;
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            color: #8b949e;
+            margin-bottom: 4px;
+        }
+
+        .card {
+            background: #111820;
+
+            border: 1px solid #27313d;
+
+            border-radius: 10px;
+
+            padding: 24px;
+
+            margin-bottom: 24px;
+        }
+
+        .summary {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(180px, 1fr)
+                );
+
+            gap: 16px;
+        }
+
+        .metric {
+            background: #0d131a;
+
+            border: 1px solid #27313d;
+
+            border-radius: 8px;
+
+            padding: 20px;
+        }
+
+        .metric strong {
+            display: block;
+
+            color: #8b949e;
+
+            font-size: 13px;
+
+            margin-bottom: 8px;
+        }
+
+        .metric span {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .risk {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .risk.high {
+            color: #ff6b6b;
+        }
+
+        .risk.medium {
+            color: #ffa94d;
+        }
+
+        .risk.low {
+            color: #69db7c;
+        }
+
+        .risk.info {
+            color: #74c0fc;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            text-align: left;
+
+            padding: 13px;
+
+            border-bottom:
+                1px solid #27313d;
+
+            vertical-align: top;
+        }
+
+        th {
+            color: #8b949e;
+
+            font-size: 13px;
+
+            text-transform: uppercase;
+        }
+
+        .open {
+            color: #69db7c;
+            font-weight: bold;
+        }
+
+        .closed {
+            color: #8b949e;
+        }
+
+        .high {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .medium {
+            color: #ffa94d;
+            font-weight: bold;
+        }
+
+        .low {
+            color: #69db7c;
+            font-weight: bold;
+        }
+
+        .info {
+            color: #74c0fc;
+            font-weight: bold;
+        }
+
+        .tls-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(280px, 1fr)
+                );
+
+            gap: 15px;
+        }
+
+        .tls-grid div {
+            background: #0d131a;
+
+            border: 1px solid #27313d;
+
+            border-radius: 8px;
+
+            padding: 16px;
+        }
+
+        .tls-grid strong {
+            display: block;
+
+            color: #8b949e;
+
+            margin-bottom: 8px;
+        }
+
+        .tls-grid span {
+            word-break: break-word;
+        }
+
+        .error {
+            padding: 15px;
+
+            border-left:
+                4px solid #ff6b6b;
+
+            background: #1a1012;
+
+            border-radius: 4px;
+        }
+
+        footer {
+            color: #66717f;
+
+            font-size: 12px;
+
+            margin-top: 30px;
+
+            padding-top: 20px;
+
+            border-top:
+                1px solid #27313d;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            th,
+            td {
+                min-width: 140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Security Audit Report</h1>
+
+        <div class="subtitle">
+            Target:
+            <strong>example.com</strong>
+        </div>
+
+        <div class="subtitle">
+            Generated:
+            2026-08-20 18:21:01
+        </div>
+    </header>
+
+    <section class="card">
+
+        <h2>Executive Summary</h2>
+
+        <div class="summary">
+
+            <div class="metric">
+                <strong>Risk Score</strong>
+                <span>6</span>
+            </div>
+
+            <div class="metric">
+                <strong>Risk Level</strong>
+                <span class="risk medium">
+                    MEDIUM
+                </span>
+            </div>
+
+            <div class="metric">
+                <strong>Findings</strong>
+                <span>5</span>
+            </div>
+
+            <div class="metric">
+                <strong>Ports Tested</strong>
+                <span>7</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Port Scan</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Port</th>
+                    <th>Service</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr><td>22</td><td>SSH</td><td class="closed">CLOSED</td></tr><tr><td>53</td><td>DNS</td><td class="open">OPEN</td></tr><tr><td>80</td><td>HTTP</td><td class="open">OPEN</td></tr><tr><td>443</td><td>HTTPS</td><td class="open">OPEN</td></tr><tr><td>3306</td><td>MySQL</td><td class="closed">CLOSED</td></tr><tr><td>5432</td><td>PostgreSQL</td><td class="closed">CLOSED</td></tr><tr><td>8080</td><td>HTTP-Alt</td><td class="open">OPEN</td></tr>
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <section class="card">
+
+        <h2>HTTP Security Findings</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Header</th>
+                    <th>Severity</th>
+                    <th>Description</th>
+                    <th>Recommendation</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr><td>Content-Security-Policy</td><td class="medium">MEDIUM</td><td>Helps mitigate XSS and other content injection attacks.</td><td>Implement a restrictive Content-Security-Policy appropriate for the application&#x27;s resources.</td></tr><tr><td>X-Content-Type-Options</td><td class="low">LOW</td><td>Helps prevent MIME-type sniffing.</td><td>Set X-Content-Type-Options to &#x27;nosniff&#x27; to reduce MIME-type sniffing risks.</td></tr><tr><td>X-Frame-Options</td><td class="low">LOW</td><td>Helps protect against clickjacking.</td><td>Set X-Frame-Options to DENY or SAMEORIGIN, or use an appropriate CSP frame-ancestors policy.</td></tr><tr><td>Referrer-Policy</td><td class="low">LOW</td><td>Controls how much referrer information browsers send.</td><td>Configure an appropriate Referrer-Policy such as strict-origin-when-cross-origin.</td></tr><tr><td>Strict-Transport-Security</td><td class="info">INFO</td><td>Enforces HTTPS connections.</td><td>Enable HSTS on HTTPS deployments after confirming that the application and required resources work correctly over HTTPS.</td></tr>
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <section class="card">
+
+        <h2>TLS / HTTPS Analysis</h2>
+
+        <div class="tls-grid"><div><strong>TLS Version</strong><span>TLSv1.3</span></div><div><strong>Cipher</strong><span>TLS_AES_256_GCM_SHA384</span></div><div><strong>Certificate Subject</strong><span>example.com</span></div><div><strong>Certificate Issuer</strong><span>Cloudflare TLS Issuing ECC CA 3</span></div><div><strong>Certificate Expiry</strong><span>2026-10-27T22:17:21+00:00</span></div><div><strong>Certificate Valid</strong><span>True</span></div></div>
+
+    </section>
+
+    <footer>
+        Generated by
+        <strong>Security Audit Toolkit</strong>.
+
+        <br>
+
+        Intended for authorized security testing
+        and defensive auditing.
+    </footer>
+
+</div>
+
+</body>
+</html>

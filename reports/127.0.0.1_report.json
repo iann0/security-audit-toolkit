@@ -1,0 +1,35 @@
+{
+    "audit": {
+        "target": "127.0.0.1",
+        "timestamp": "2026-08-20T17:10:09.769681",
+        "risk_score": 6,
+        "risk_level": "HIGH",
+        "findings": [
+            {
+                "header": "Content-Security-Policy",
+                "severity": "MEDIUM",
+                "description": "Helps mitigate XSS and other content injection attacks."
+            },
+            {
+                "header": "X-Content-Type-Options",
+                "severity": "LOW",
+                "description": "Helps prevent MIME-type sniffing."
+            },
+            {
+                "header": "X-Frame-Options",
+                "severity": "LOW",
+                "description": "Helps protect against clickjacking."
+            },
+            {
+                "header": "Referrer-Policy",
+                "severity": "LOW",
+                "description": "Controls how much referrer information browsers send."
+            },
+            {
+                "header": "Strict-Transport-Security",
+                "severity": "INFO",
+                "description": "Enforces HTTPS connections."
+            }
+        ]
+    }
+}

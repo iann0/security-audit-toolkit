@@ -1,0 +1,83 @@
+{
+    "audit": {
+        "target": "172.66.147.243",
+        "timestamp": "2026-08-20T17:47:02.725871",
+        "risk_score": 6,
+        "risk_level": "HIGH",
+        "ports": [
+            {
+                "port": 22,
+                "service": "SSH",
+                "open": false
+            },
+            {
+                "port": 53,
+                "service": "DNS",
+                "open": true
+            },
+            {
+                "port": 80,
+                "service": "HTTP",
+                "open": true
+            },
+            {
+                "port": 443,
+                "service": "HTTPS",
+                "open": true
+            },
+            {
+                "port": 3306,
+                "service": "MySQL",
+                "open": false
+            },
+            {
+                "port": 5432,
+                "service": "PostgreSQL",
+                "open": false
+            },
+            {
+                "port": 8080,
+                "service": "HTTP-Alt",
+                "open": true
+            }
+        ],
+        "findings": [
+            {
+                "header": "Content-Security-Policy",
+                "severity": "MEDIUM",
+                "description": "Helps mitigate XSS and other content injection attacks."
+            },
+            {
+                "header": "X-Content-Type-Options",
+                "severity": "LOW",
+                "description": "Helps prevent MIME-type sniffing."
+            },
+            {
+                "header": "X-Frame-Options",
+                "severity": "LOW",
+                "description": "Helps protect against clickjacking."
+            },
+            {
+                "header": "Referrer-Policy",
+                "severity": "LOW",
+                "description": "Controls how much referrer information browsers send."
+            },
+            {
+                "header": "Strict-Transport-Security",
+                "severity": "INFO",
+                "description": "Enforces HTTPS connections."
+            }
+        ],
+        "tls": {
+            "status": "success",
+            "tls_version": "TLSv1.3",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "certificate": {
+                "subject": "example.com",
+                "issuer": "Cloudflare TLS Issuing ECC CA 3",
+                "expiry": "2026-10-27T22:17:21+00:00",
+                "valid": true
+            }
+        }
+    }
+}
