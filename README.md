@@ -1,11 +1,7 @@
 Security Audit Toolkit
-
 A lightweight Python security auditing tool for checking common security issues on web hosts.
 
-The project started as a way for me to learn more about network security, HTTP security headers, TLS, and security reporting. It currently focuses on basic reconnaissance and configuration checks rather than exploitation.
-
 Features
-
 - Hostname and IP resolution
 - TCP port scanning
 - Basic service identification
@@ -20,7 +16,6 @@ Features
 - Remediation recommendations
 
 Project Structure
-
 security-audit-toolkit/
 ├── auditor.py
 ├── modules/
@@ -35,7 +30,6 @@ security-audit-toolkit/
 └── requirements.txt
 
 Requirements
-
 - Python 3
 - A terminal
 - Network access for remote targets
@@ -43,11 +37,8 @@ Requirements
 The project currently uses Python's standard library, so there are no major third-party dependencies required.
 
 Installation
-
 Clone the repository:
-
-git clone https://github.com/YOUR_USERNAME/security-audit-toolkit.git
-
+git clone https://github.com/iann0/security-audit-toolkit.git
 Enter the project:
 
 cd security-audit-toolkit
@@ -103,7 +94,6 @@ PORT SCAN
 HTTP SECURITY HEADERS
 ────────────────────────────────
 [+] HTTP Status: 200
-
 [!] Content-Security-Policy: MISSING
 [+] X-Content-Type-Options: PRESENT
 [+] X-Frame-Options: PRESENT
@@ -146,15 +136,11 @@ Then open:
 http://localhost:8000
 
 Navigate to:
-
 reports/
-
 and open the generated HTML report.
 
 Risk Methodology
-
 The risk engine separates severity from the numerical score.
-
 Each finding has one of four severity levels:
 
 Severity| Score| Meaning
@@ -164,9 +150,7 @@ MEDIUM| 3| Security issue that should be reviewed
 HIGH| 5| Significant security issue
 
 The overall risk level is determined by the highest severity finding, rather than simply adding all scores together.
-
 For example:
-
 MEDIUM
 LOW
 LOW
@@ -187,25 +171,19 @@ INFO
 results in:
 
 Risk Level: HIGH
-
 The numerical score is retained as a quick indicator of the number and severity of findings, while the overall risk level reflects the most serious finding discovered.
 
 Reports
-
 Each audit produces two reports:
 
 JSON
-
 reports/example.com_report.json
-
 The JSON report is intended to provide structured data that can be processed by other tools or used for future automation.
 
 HTML
-
 reports/example.com_report.html
 
 The HTML report provides a more readable security assessment containing:
-
 - Executive summary
 - Risk score
 - Risk level
@@ -216,19 +194,13 @@ The HTML report provides a more readable security assessment containing:
 - Certificate information
 
 Security Considerations
-
 This tool is intended for authorized security testing and defensive auditing.
-
 Only scan systems that you own or have explicit permission to assess.
-
 The project does not attempt to exploit discovered vulnerabilities.
 
 Limitations
-
 This is a learning project and is not intended to replace professional security assessment tools.
-
 Current limitations include:
-
 - Limited port list
 - Basic service detection
 - Basic HTTP header analysis
@@ -237,13 +209,10 @@ Current limitations include:
 - No authenticated application testing
 - No deep web application scanning
 - Risk scoring is intentionally simple
-
 These limitations are useful areas for future development.
 
 Future Improvements
-
 Possible future additions include:
-
 - Configurable port ranges
 - Better service detection
 - More HTTP security checks
@@ -256,15 +225,9 @@ Possible future additions include:
 - Export to additional formats
 
 Why I Built This
-
 I built this project to get more hands-on experience with Python, networking, HTTP, TLS, and security automation.
-
 Rather than relying entirely on existing security scanners, I wanted to understand what happens underneath them and build the individual pieces myself.
 
 Author
-
-Ian
-
-IT Graduate | Python | Networking | Cybersecurity
-
+Ian AA
 This project is part of my personal IT/security portfolio.
