@@ -1,4 +1,4 @@
-Security Audit Toolkit
+# Security Audit Toolkit
 A lightweight Python security auditing tool for checking common security issues on web hosts.
 
 Features
@@ -15,7 +15,7 @@ Features
 - HTML report generation
 - Remediation recommendations
 
-Project Structure
+# Project Structure
 security-audit-toolkit/
 ├── auditor.py
 ├── modules/
@@ -29,14 +29,14 @@ security-audit-toolkit/
 ├── README.md
 └── requirements.txt
 
-Requirements
+# Requirements
 - Python 3
 - A terminal
 - Network access for remote targets
 
 The project currently uses Python's standard library, so there are no major third-party dependencies required.
 
-Installation
+# Installation
 Clone the repository:
 git clone https://github.com/iann0/security-audit-toolkit.git
 Enter the project:
@@ -53,7 +53,7 @@ python -m py_compile modules/html_report.py
 python -m py_compile modules/ssl_check.py
 python -m py_compile modules/risk.py
 
-Usage
+# Usage
 
 Run an audit against a hostname:
 
@@ -193,12 +193,12 @@ The HTML report provides a more readable security assessment containing:
 - TLS information
 - Certificate information
 
-Security Considerations
+# Security Considerations
 This tool is intended for authorized security testing and defensive auditing.
 Only scan systems that you own or have explicit permission to assess.
 The project does not attempt to exploit discovered vulnerabilities.
 
-Limitations
+# Limitations
 This is a learning project and is not intended to replace professional security assessment tools.
 Current limitations include:
 - Limited port list
@@ -211,7 +211,7 @@ Current limitations include:
 - Risk scoring is intentionally simple
 These limitations are useful areas for future development.
 
-Future Improvements
+# Future Improvements
 Possible future additions include:
 - Configurable port ranges
 - Better service detection
@@ -224,7 +224,7 @@ Possible future additions include:
 - Improved HTML reporting
 - Export to additional formats
 
-Why I Built This
+# Why I Built This
 I built this project to get more hands-on experience with Python, networking, HTTP, TLS, and security automation.
 Rather than relying entirely on existing security scanners, I wanted to understand what happens underneath them and build the individual pieces myself.
 
